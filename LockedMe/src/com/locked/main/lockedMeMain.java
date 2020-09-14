@@ -21,7 +21,7 @@ public class lockedMeMain {
 		System.out.println("\nMenu");
 		System.out.println("-----------------------------");
 		System.out.println("1)Show all files");
-		System.out.println("2)Create/Delete/Sort files");
+		System.out.println("2)Create/Delete/Sort/Search files");
 		System.out.println("3)exit");
 		try {
 			ch = Integer.parseInt(sc.nextLine());
@@ -71,7 +71,7 @@ public class lockedMeMain {
 		System.out.println("\nMenu");
 		System.out.println("-----------------------------");
 		System.out.println("1)Show all files");
-		System.out.println("2)Create/Delete/Sort files");
+		System.out.println("2)Create/Delete/Sort/Search files");
 		System.out.println("3)exit");
 
 		lockedMeService service = new lockedMeServiceImpl();

@@ -1,0 +1,53 @@
+LockedMe APP
+Developer: Pamula Bhargav Ram
+Github Repo: https://github.com/bhargavRamProlims/Phase1
+
+-Created the LockedMe class to initiate the model and added getters and setters.
+-Created the Exception class which extends the Exception class. Such that developer has taken care of the Exceptions.
+-Created the database interface to maintain the Data.
+-Created the directory "var" where the files are maintained.
+-Created the database implementor classs to maintain the database.
+
+--used overide annotations to update the database interface.
+
+--createFile function contains the algorithm to create the file and store the details in the Hash Map.
+---used try-catch blocks for exception handling.
+---used if else blocks to check if the creating file already exists.
+
+--deleteFile is created for deletion of files.
+---checks if file exists and then procedes to delete and update the hash map.
+---Throws exception when file is not found.
+
+--sortFiles is created to sort the files.
+---used the Collections library to ustilize the sort function.
+---throws exception when no files are in the directory.
+
+--getAllFiles is created to visualise the files present in the directory.
+---used the File object to access the files in the directory.
+---throws exception when no files are in the directory.
+
+--getFilesByID is created to search files by ID.
+---ID is auto generated and will be visible in the display.
+---throws exception if ID is invalid or doesn't exist.
+
+--getFilesByName is created to search files by name.
+---throws exception if name is invalid or doesn't exist.
+
+-Created the service interface to maintain the Databasse class.
+-Created the Service implementor class is created to override he functions from service interface.
+--CreateFile checks if the name is valid or not and calls the function from the database class.
+--DeleteFile checks if the entered ID is valid or not and calls the function from the database class.
+--Sortfiles calls the sort function from the database class as the exception handling is already done in the database class.
+--GetAllFiles calls the getAllFiles function from the database class as the exception handling is already done in the database class.
+--GetFilesByID calls the getFilesById function from the database class as the exception handling is already done in the database class.
+--GetFileByName calls the getFilesByName function from the database class as the exception handling is already done in the database class.
+
+-Created the Main class to implement all the functions created till now.
+--Added the display messages that are required.
+--used the try-catch blocks to handle exceptions that comes up on invalid input.
+--used switch block for options.
+--created two more functions to access the main menu and Sub menu.
+--the cases from Switch block contains the display messages and calls the functions from service implementor.
+--Sub-menu contains the file handling methods.
+--try-catch blocks in the case blocks are added to display the exception when invalid input is entered.
+-The App won't break or throws error when any invalid input is entered.

@@ -1,0 +1,24 @@
+LockedMe APP
+Developer: Pamula Bhargav Ram
+Github Repo: https://github.com/bhargavRamProlims/Phase1
+Sprints: 2
+
+Tasks achieved: 
+Sprint 1;
+-Created the model class.
+-Database class is created to maintain the data.
+-Service class is created to access the data from Database class.
+-Main class is created to complete the App.
+Sprint 2;
+-Feature to accept the inputs and display of options are added.
+-Updated the main class in order to handle exceptions.
+-Releasing the final prototype which handles excpetions and met with all the tasks.
+
+-After running the code, the details of App and the menu is displayed.
+-Please type the ID of the option to access the option.
+-Any other entry would lead to Invalid exception. It is handeled so the entry can be made again without exiting app.
+-In the File-Menu, there are multiple options available to manage the files.
+-the files are created by default as text files(.txt). 
+-For creating the files only enter the name of the file. which applies same for searching the file with name.
+-7th option goes back to the main menu. from where the app can be exited.
+-All exceptions are handled.

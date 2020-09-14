@@ -107,7 +107,7 @@ public class lockedMeDAOImpl implements lockedMeDAO{
 		List<lockedMe> lockedMeList = lockedMeMap.values().stream()
 				.filter(s -> s.getName().equals(f1)).collect(Collectors.toList());
 		if(lockedMeList.size()==0) {
-			throw new lockedMeException("No file is found with the given id");
+			throw new lockedMeException("No file is found with the given Name :"+fileName);
 		}
 		return lockedMeList;
 	}
