@@ -23,7 +23,13 @@ public class lockedMeMain {
 		System.out.println("1)Show all files");
 		System.out.println("2)Create/Delete/Sort files");
 		System.out.println("3)exit");
-		ch = Integer.parseInt(sc.nextLine());
+		try {
+			ch = Integer.parseInt(sc.nextLine());
+		} catch(NumberFormatException e) {
+			System.out.println(e);
+			menu();
+			return ;
+		}
 		switch (ch) {
 		case 1:
 			List<lockedMe> lockedMeList;
@@ -69,7 +75,13 @@ public class lockedMeMain {
 		System.out.println("3)exit");
 
 		lockedMeService service = new lockedMeServiceImpl();
-		ch = Integer.parseInt(sc.nextLine());
+		try {
+			ch = Integer.parseInt(sc.nextLine());
+		} catch(NumberFormatException e) {
+			System.out.println(e);
+			menu();
+			return ;
+		}
 		switch (ch) {
 		case 1:
 			List<lockedMe> lockedMeList;
@@ -115,7 +127,13 @@ public class lockedMeMain {
 		System.out.println("5)search file through Name");
 		System.out.println("6)search file through ID");
 		System.out.println("7)Go back to previous Menu");
-		ch = Integer.parseInt(sc.nextLine());
+		try {
+			ch = Integer.parseInt(sc.nextLine());
+		} catch(NumberFormatException e) {
+			System.out.println(e);
+			subMenu();
+			return ;
+		}
 
 		lockedMeService service = new lockedMeServiceImpl();
 		switch (ch) {
@@ -156,6 +174,9 @@ public class lockedMeMain {
 				}
 			} catch (lockedMeException e) {
 				System.out.println(e);
+			} catch (NumberFormatException e) {
+				System.out.println(e);
+				System.out.println("Invalid Input");
 			}
 			subMenu();
 			break;
@@ -210,8 +231,8 @@ public class lockedMeMain {
 			break;
 		case 6:
 			System.out.println("Please enter the ID to search");
-			int id = Integer.parseInt(sc.nextLine());
 			try {
+				int id = Integer.parseInt(sc.nextLine());
 				lockedMe lockedMeid = service.getfilesById(id);
 				if(lockedMeid.getId()==id) {
 					System.out.println("Search is successfull");
@@ -222,6 +243,9 @@ public class lockedMeMain {
 				System.out.println();
 			} catch (lockedMeException e) {
 				System.out.println(e);
+			} catch (NumberFormatException e) {
+				System.out.println(e);
+				System.out.println("Invalid Input. Please try again!");
 			}
 			subMenu();
 			break;
